@@ -52,8 +52,8 @@ begin
     exit
   end
   unless ([:encryption_mode, :decryption_mode] & options.keys).empty?
-    manditory = [:key_name, :input_file]
-    missing = manditory.select{ |param| options[param].nil? }
+    mandatory = [:key_name, :input_file]
+    missing = mandatory.select{ |param| options[param].nil? }
     unless missing.empty?
       puts "Missing options: #{missing.join(', ')}"
       puts optparse
